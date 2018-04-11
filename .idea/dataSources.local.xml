@@ -8,5 +8,16 @@
       <auth-required>false</auth-required>
       <introspection-schemas>*:main</introspection-schemas>
     </data-source>
+    <data-source name="Rails PetsHuggy: development" uuid="4c728849-85ac-424a-b43f-d9a3070eec3a">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
+    <data-source name="Rails PetsHuggy: test" uuid="54610fa1-a84a-4335-85e0-cd195ec7f7c0">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
   </component>
 </project>

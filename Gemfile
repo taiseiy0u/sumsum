@@ -33,9 +33,14 @@ gem 'omniauth-facebook'
 gem "paperclip", "~> 6.0.0"
 gem 'dropzonejs-rails'
 gem "figaro", "~> 1.1.0"
-gem 'aws-sdk', '~> 2.3'
-
-gem 'thin'
+# gem 'aws-sdk', '~> 2.3'
+gem "aws-sdk-s3"
+gem 'geocoder'
+gem 'jquery-ui-rails'
+gem 'stripe'
+gem "private_pub"
+gem "thin"
+gem "pry-byebug"
 
 group :production do
   gem 'pg'
@@ -70,6 +75,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem "better_errors"
+  gem "binding_of_caller"
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -16,6 +16,23 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :listings do
+    resources :reservations, only: [:create]
+  end
+
+  resources :listings do
+    resources :reviews, only: [:create, :destroy]
+  end
+
+  resources :conversations, only: [:index, :create] do
+    resources :messages, only: [:index, :create]
+  end
+
+  get '/setdate' => 'reservations#setdate'
+  get '/duplicate' => 'reservations#duplicate'
+  get '/reservations' => 'reservations#index'
+  get '/reserved' => 'reservations#reserved'
+
   get 'manage-listing/:id/basics' => 'listings#basics', as: 'manage_listing_basics'
   get 'manage-listing/:id/description' => 'listings#description', as: 'manage_listing_description'
   get 'manage-listing/:id/address' => 'listings#address', as: 'manage_listing_address'
@@ -25,6 +42,14 @@ Rails.application.routes.draw do
   get 'manage-listing/:id/bankaccount' => 'listings#bankaccount', as: 'manage_listing_bankaccount'
   get 'manage-listing/:id/publish' => 'listings#publish', as: 'manage_listing_publish'
 
+  #stripe connect oauth path
+  get '/connect/oauth' => 'stripe#oauth', as: 'stripe_oauth'
+  get '/connect/confirm' => 'stripe#confirm', as: 'stripe_confirm'
+  get '/connect/deauthorize' => 'stripe#deauthorize', as: 'stripe_deauthorize'
+
+  get '/not_checked' => 'listings#not_checked'
+
+  get '/search' => 'pages#search'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
-
