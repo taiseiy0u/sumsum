@@ -41,6 +41,7 @@ gem 'stripe'
 gem "private_pub"
 gem "thin"
 gem "pry-byebug"
+gem "ransack"
 
 group :production do
   gem 'pg'
