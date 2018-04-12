@@ -18,6 +18,10 @@ class ReservationsController < ApplicationController
     @listings = current_user.listings
   end
 
+  def nil.split *args
+    nil # splitting of nil, in any imaginable way, can only result again in nil
+  end
+
   def create
     @listing = Listing.find(params[:listing_id])
 
@@ -53,7 +57,7 @@ class ReservationsController < ApplicationController
         end
       end
 
-      redirect_to :back, notice: "更新しました。"
+      redirect_back fallback_location: root_path,notice:"更新しました"
 
     else   #他人の部屋の予約作成とStripeのpayアクションの実行
       # Find the user to pay.

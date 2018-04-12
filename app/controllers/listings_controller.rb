@@ -38,9 +38,9 @@ class ListingsController < ApplicationController
   end
 
   def update
-    if @listing.update(listing_params)
-      redirect_to :back, notice: "更新できました"
-    end
+
+    @listing.update(listing_params)
+    redirect_back fallback_location: root_path,notice:"更新できました"
   end
 
   def basics

@@ -37,7 +37,10 @@ gem "figaro", "~> 1.1.0"
 gem "aws-sdk-s3"
 gem 'geocoder'
 gem 'jquery-ui-rails'
+
 gem 'stripe'
+gem 'rest-client'
+
 gem "private_pub"
 gem "thin"
 gem "pry-byebug"
