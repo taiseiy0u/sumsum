@@ -1,15 +1,27 @@
+<script>
+    $(function(){
+        $("#pac-input").removeClass("hidden")
+    });
+</script>
 <%= render 'partial/navbar' %>
 
-<div class="col-md-6">
-  <div class="">
-    <%= text_field_tag :search, params[:search], placeholder: "Where are you going?", class: "form-control",id:"pac-input" %>
-  </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Search Filter -->
+      <div id="search-filter">
+        <%= render 'filter' %>
+      </div>
+      <!-- Search Result -->
+      <div id="search-result" class="row-space-top-4">
+        <%= render 'list' %>
+      </div>
+    </div>
 
-</div>
-
-<div class="col-md-6">
-  <div id="map" style="height: 500px;">
-
+    <div class="col-md-6">
+      <div id="map" style="height: 500px;">
+      </div>
+    </div>
   </div>
 </div>
 
@@ -68,6 +80,7 @@
 
         <% end %>
 
+        //autocompleteの検索欄が変更された時の処理
         autocomplete.addListener('place_changed', function() {
 
             // すべてのinfowindowを消す
@@ -119,6 +132,36 @@
             });
 
         });
+
+        //google map がドラッグされた時の処理
+        google.maps.event.addListener(map, 'dragend', function() {
+            // すべてのinfowindowを消す
+            infowindows.forEach(function(infowindow) {
+                infowindow.close();
+            });
+            infowindows = [];
+
+            // すべてのmarkerを消す
+            markers.forEach(function(marker) {
+                marker.setVisible(false);
+            });
+            markers = [];
+
+            var pos = map.getCenter();
+            var lat = pos.lat();
+            var lng = pos.lng();
+
+            var geolocation = [lat,lng];
+
+            $.ajax({
+                url: '/ajaxsearch',
+                // this data is data for sending to url
+                data: {'geolocation': geolocation}
+            });
+
+        });
+
+
     }
 
 </script>
