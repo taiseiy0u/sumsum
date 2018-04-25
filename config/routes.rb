@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :listings
 
   root :to => 'pages#index'
@@ -49,6 +50,8 @@ Rails.application.routes.draw do
   get '/search' => 'pages#search'
 
   get '/ajaxsearch' => 'pages#ajaxsearch'
+
+  get '/request' => 'request#index'
 
 end
 

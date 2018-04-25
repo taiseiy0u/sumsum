@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def index #views/index.html.erbを表示させるというアクション
     @users = User.all
+    @listings = Listing.where('active', true)
   end
 
   def search

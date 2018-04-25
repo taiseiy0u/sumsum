@@ -23,6 +23,9 @@ class MessagesController < ApplicationController
       #create.js.erb　が実行される
       respond_to do |format|
         format.js
+
+        redirect_to conversations_path, notice: "メッセージを送信しました"
+
       end
     end
   end

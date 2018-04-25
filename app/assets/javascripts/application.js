@@ -22,6 +22,7 @@
 //= require turbolinks
 //= require_tree .
 
+
 //bootstrapはWebページから3つを追加
 // jqueryコメントアウトしてます
 // require jquery-ui/widgets/datepicker-jaコメントアウトします、i18nに変えました。

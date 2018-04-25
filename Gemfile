@@ -46,6 +46,8 @@ gem "thin"
 gem "pry-byebug"
 gem "ransack"
 
+#gem 'bcrypt'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'

@@ -24,12 +24,9 @@
         <li class="<%= 'active' if controller?("listings") && action?("photos") %>" id = "nav-photos">
           <%= link_to "写真", manage_listing_photos_path(@listing),data:{no_turbolink: true} %>
         </li>
-        <li class="<%= 'active' if controller?("listings") && action?("calendar") %>">
-          <%= link_to "カレンダー", manage_listing_calendar_path(@listing) %>
-        </li>
-        <li class="<%= 'active' if controller?("listings") && action?("bankaccount") %>" id = "nav-bankaccount">
-          <%= link_to "受取口座情報", manage_listing_bankaccount_path(@listing) %>
-        </li>
+        <!--<li class="= 'active' if controller?("listings") && action?("bankaccount") %>" id = "nav-bankaccount">-->
+          <!--= link_to "受取口座情報", manage_listing_bankaccount_path(@listing) %>-->
+        <!--</li>-->
         <li class="<%= 'active' if controller?("listings") && action?("publish") %>" id = "nav-publish">
           <%= link_to "公開する", manage_listing_publish_path(@listing) %>
         </li>
@@ -42,7 +39,7 @@
     $(function(){
 
         // basicsが常に存在するので、値は5からスタート
-        var notchecked = 5;
+        var notchecked = 4;
 
         // Modelに値が存在するならば、chekedクラスを追加して、not checked-- により、あたいをヘラす。
         <% if !@listing.listing_title.blank? && !@listing.listing_content.blank? %>
@@ -73,12 +70,12 @@
         $('#nav-price').attr('class', 'listing-notchecked');
         <% end %>
 
-        <% if !@listing.user.stripe_user_id.blank? %>
-        $('#nav-bankaccount').attr('class', 'listing-checked');
-        notchecked--;
-        <%else%>
-        $('#nav-bankaccount').attr('class', 'listing-notchecked');
-        <% end %>
+        // if !@listing.user.stripe_user_id.blank? %>
+        //$('#nav-bankaccount').attr('class', 'listing-checked');
+        //notchecked--;
+        //<else%>
+        //$('#nav-bankaccount').attr('class', 'listing-notchecked');
+        //< end %>
 
 
         // notcheckedがあるなら、残り〜と表示して、違うなら、公開するを押せるようにする。

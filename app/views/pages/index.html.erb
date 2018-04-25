@@ -10,8 +10,8 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
-        <h1 class="display-3">Hello, world!</h1>
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h1 class="display-3">シェア寮に住もう</h1>
       </div>
     </div>
   </div>
@@ -25,19 +25,14 @@
           <%= hidden_field_tag :lat %>
           <%= hidden_field_tag :lng %>
 
-          <div class="col-md-7 col-xs-10" style="padding-right: 0px">
+          <div class="col-md-11 col-xs-10" style="padding-right: 0px">
             <%= text_field_tag :search, params[:search], placeholder: "希望の場所はどこですか？", class: "form-control",id:"top-search-form" %>
           </div>
 
-          <div class="col-md-2 hidden-xs hidden-sm">
-            <%= text_field_tag :start_date, params[:start_date], placeholder: "チェックイン", class: "form-control" %>
-          </div>
-          <div class="col-md-2 hidden-xs hidden-sm">
-            <%= text_field_tag :end_date, params[:end_date], placeholder: "チェックアウト", class: "form-control" %>
-          </div>
           <div class="col-md-1 col-xs-2" style="padding-left: 0px; ">
             <%= submit_tag "検索", class: "btn btn-danger" %>
           </div>
+
         </div>
       </div>
     <% end %>
@@ -51,24 +46,24 @@
       <div class="row row-space-4">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">ご利用の流れ</h2>
-          <h3 class="section-subheading">Petshuggyはペットを預けるサービスです</h3>
+          <h3 class="section-subheading">シェア寮を探そう</h3>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-4">
-          <%= image_tag 'search-icon'%>
-          <h4 class="service-heading">探す</h4>
-          <p class="text-muted hidden-xs">まず、ペットを預けるペットシッターをこのサイトで検索しましょう。</p>
+          <%= image_tag 'search', class: "img-circle" %>
+          <h4 class="service-heading">検索する</h4>
+          <p class="text-muted hidden-xs">近くのシェア寮を探そう</p>
         </div>
         <div class="col-md-4">
-          <%= image_tag 'calendar-icon'%>
-          <h4 class="service-heading">予約する</h4>
-          <p class="text-muted hidden-xs">いいなと思うペットシッターがいたら、ペットを預けたい日にちを予約しましょう。</p>
+          <%= image_tag 'request', class: "img-circle" %>
+          <h4 class="service-heading">リクエスト</h4>
+          <p class="text-muted hidden-xs">気になるシェア寮が見つかったら、リクエストを送ろう</p>
         </div>
         <div class="col-md-4">
-          <%= image_tag 'home-icon'%>
-          <h4 class="service-heading">預ける</h4>
-          <p class="text-muted hidden-xs">予約した日の当日になったら、ペットを預けて、自分たちの時間を楽しみましょう！</p>
+          <%= image_tag 'chat', class: "img-circle" %>
+          <h4 class="service-heading">入居へ</h4>
+          <p class="text-muted hidden-xs">管理人の方との連絡はチャットで可能、いざ入居へ</p>
         </div>
       </div>
     </div>
@@ -79,23 +74,27 @@
     <div class="container">
       <div class="row row-space-2">
         <div class="col-lg-12 text-center">
-          <h3 class="section-heading">おすすめのシッター紹介</h3>
-          <h4 class="section-subheading">Petshuggy認定のペットシッターです</h4>
+          <h3 class="section-heading">オススメのシェア寮を紹介</h3>
+          <!--<h4 class="section-subheading">あなたの近くにある社員寮を紹介しています</h4>-->
         </div>
       </div>
 
       <div class="row">
         <% @users.each do |user|%>
-          <% if !user.listings.blank?%>
-            <div class="col-md-4 col-sm-6 portfolio-item row-space-2">
-              <%= link_to listing_path(user.listings[0]) do %>
-                <%= image_tag user.listings[0].photos[0].image.url(:medium) %>
+          <% if !user.listings.blank? %>
+            <% user.listings.each do |listing| %>
+              <% if listing.active == true %>
+                <div class="col-md-4 col-sm-6 portfolio-item row-space-2">
+                  <%= link_to listing_path(listing) do %>
+                    <%= image_tag listing.photos[0].image.url(:medium) %>
+                  <% end %>
+                  <div class="portfolio-caption">
+                    <%= image_tag user.image,class:"img-circle profile-1"%>
+                    <span style="font-weight: bold;"><%= user.name %>さん</span>
+                  </div>
+                </div>
               <% end %>
-              <div class="portfolio-caption">
-                <%= image_tag user.image,class:"img-circle profile-1"%>
-                <span style="font-weight: bold;"><%= user.name %>さん</span>
-              </div>
-            </div>
+            <% end %>
           <% end %>
         <% end %>
       </div>
@@ -157,3 +156,5 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYFebqJC5HO_R48QLaLifcJNkT6LUCMzs&signed_in=true&libraries=places&callback=init"
         async defer></script>
+
+
