@@ -2,54 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6344a8af-799f-4b9a-bd0b-b436376bdb68" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/chat.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/person.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/request.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/search.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/avatar-default.png" afterPath="$PROJECT_DIR$/app/assets/images/avatar-default.png" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/calendar-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/easter-3270993_1920.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/home-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/person-845325_1920.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/search-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/listings.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/pages.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/listings.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/listings_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/listings_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/messages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/reservations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/reservations_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/stripe_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/stripe_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/services/stripe_oauth.rb" afterPath="$PROJECT_DIR$/app/services/stripe_oauth.rb" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/views/listings/address.html.erb" afterPath="$PROJECT_DIR$/app/views/listings/address.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/listings/bankaccount.html.erb" afterPath="$PROJECT_DIR$/app/views/listings/bankaccount.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/listings/basics.html.erb" afterPath="$PROJECT_DIR$/app/views/listings/basics.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/listings/calender.html.erb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/views/listings/index.html.erb" afterPath="$PROJECT_DIR$/app/views/listings/index.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/listings/new.html.erb" afterPath="$PROJECT_DIR$/app/views/listings/new.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/listings/show.html.erb" afterPath="$PROJECT_DIR$/app/views/listings/show.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/_list.html.erb" afterPath="$PROJECT_DIR$/app/views/pages/_list.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/index.html.erb" afterPath="$PROJECT_DIR$/app/views/pages/index.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/partial/_navbar.html.erb" afterPath="$PROJECT_DIR$/app/views/partial/_navbar.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/partial/_verticalnavbar.html.erb" afterPath="$PROJECT_DIR$/app/views/partial/_verticalnavbar.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/reservations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/reservations/index.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/reservations/reserved.html.erb" afterPath="$PROJECT_DIR$/app/views/reservations/reserved.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/stripe/_connect.html.erb" afterPath="$PROJECT_DIR$/app/views/stripe/_connect.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/stripe/_setting.html.erb" afterPath="$PROJECT_DIR$/app/views/stripe/_setting.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -156,7 +109,7 @@
       <file leaf-file-name="messages_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
+            <state relative-caret-position="58">
               <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
               <folding />
             </state>
@@ -728,12 +681,12 @@
       <workItem from="1524304969829" duration="145000" />
       <workItem from="1524305449945" duration="1008000" />
       <workItem from="1524309745177" duration="4000" />
-      <workItem from="1524379319583" duration="49087000" />
+      <workItem from="1524379319583" duration="49348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274634000" />
+    <option name="totallyTimeSpent" value="274895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1428" height="810" extended-state="0" />
@@ -1174,7 +1127,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
+        <state relative-caret-position="58">
           <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
           <folding />
         </state>
