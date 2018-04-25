@@ -16,33 +16,42 @@
 
         <%= form_for @listing do |f| %>
 
-          <!--<div class="row">-->
-            <!--<div class="col-md-12">-->
-              <!--<div class="form-group">-->
-                <!--<label>〒</label>-->
-                <!--<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>-->
-                <!--&lt;!&ndash; ▼郵便番号入力フィールド(7桁) &ndash;&gt;-->
-                <!--<input f.text_field :address, placeholder= "例: 1234567", class="form-control", name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>〒</label>
+                <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+                <!-- ▼郵便番号入力フィールド(7桁) -->
+                <input f.text_field :hoge, placeholder= "例: 1234567", class="form-control", name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
+                <%= f.hidden_field :address %>
+              </div>
+            </div>
+          </div>
 
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                 <label>住所</label>
                 <!-- ▼住所入力フィールド(都道府県+以降の住所) -->
-                <%= f.text_field :address, placeholder: "例: 東京都港区六本木６丁目１１−１", class: "form-control", required: "true" %>
+                <%= f.text_field :address, placeholder: "例: 東京都港区六本木６丁目１１−１", class: "form-control", required: "true" , name:"addr11", id: "hoge" %>
                 <!--上矢印　これ追加　, name:"addr11"　してね-->
               </div>
             </div>
           </div>
 
           <div class="actions">
-            <%= f.submit "更新", class: "btn btn-danger" %>
+            <%= f.submit "更新", class: "btn btn-danger", onClick: 'setAddress()' %>
           </div>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  function setAddress() {
+      var hoge = document.getElementById("hoge").value;
+      document.getElementById('listing_address').value = hoge;
+  }
+</script>
+
