@@ -21,7 +21,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if (!user_signed_in?) %>
           <!-- ログインしていない時 -->
-          <li><%= link_to "シェアする", new_listing_path %></li>
+          <li><a href="#">空き部屋をシェアする</a></li>
           <li><a href="#">ヘルプ</a></li>
           <li><%= link_to "アカウント作成", new_user_registration_path %></li>
           <li><%= link_to "ログイン", new_user_session_path %></li>

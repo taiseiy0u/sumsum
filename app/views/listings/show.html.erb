@@ -82,7 +82,7 @@
             </div>
             <div class="panel-body panel-real">
             <div class="actions text-center">
-              <%= link_to "リクエストを送る", request_path, class: "btn btn-danger btn-wide" %>
+              <%= link_to "リクエストを送る", request_path, class: "btn btn-success btn-wide" %>
             </div>
 
               <!--<%= form_for [@listing, @listing.reservations.new], url: new_listing_reservation_path(@listing), html: {method: "get"} do |f| %>-->
@@ -207,6 +207,7 @@
       <h3 class="row-space-3">近くのリスティング</h3>
 
       <% for listing in @listing.nearbys(10) %>
+        <% if listing.active == true %>
         <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading panel-listing text-center" style="padding: 0;">
@@ -231,7 +232,7 @@
           </div>
         </div>
       <% end %>
-
+      <% end %>
     </div>
 
     <div class="col-md-3">

@@ -1,5 +1,4 @@
 class ListingsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_listing, only: [:show, :update, :basics, :description, :address, :price, :photos, :publish]
   before_action :access_deny, only: [:basics, :description, :address, :price, :photos, :publish]
   def index
@@ -95,7 +94,5 @@ class ListingsController < ApplicationController
       redirect_to root_path, notice: "他人の編集ページにはアクセスできません"
     end
   end
-
-
 
 end
